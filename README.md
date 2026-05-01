@@ -25,3 +25,7 @@ Conditional VAE in PyTorch trained on the [20k Album Covers Within 20 Genres](ht
 
 Update 04/28
 Ran model in google colab only for it to crash so configured quest and now training the model on quest
+
+
+Update 05/01
+Ran and tried some parameters on the conditional VAE but not entirely happy with the results so trying more params + looking into diffusion architectures
