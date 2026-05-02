@@ -29,3 +29,6 @@ Ran model in google colab only for it to crash so configured quest and now train
 
 Update 05/01
 Ran and tried some parameters on the conditional VAE but not entirely happy with the results so trying more params + looking into diffusion architectures
+
+<img width="935" height="284" alt="image" src="https://github.com/user-attachments/assets/c2f0dfb3-872a-44b1-ab09-de53d382d40d" />
+
