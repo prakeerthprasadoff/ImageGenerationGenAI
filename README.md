@@ -37,3 +37,22 @@ The following is the output recevied from Diffusion models.
 
 It seems that conditonal VAEs might be better. Trying to better the outputs and look into other architectures. Also analysing why this could be the case
 
+Update 05/02- 05/05
+I've been trying multiple different configurations of VAEs, GANs, and Diffusion models. None of the results are satisfactory. I tried making the networks deeper, tried different pre processing techniques on the images, and still the result didn't improve. Finally to make sure that the number of classes wasn't overwhelming the model, I cut down to just one class "Rock" and tried training the GANs, WGANs, Diffusion models, and VAEs (also tried tuning hyper parameters like learning rate, diffusions schedules-used cosine and offset cosine) but still no improvement.
+
+These are my generated album covers for epochs 500, and 1000 using the diffusion model with an offset cosine diffusion schedule with 10 denoising steps(you had suggested).
+<img width="1308" height="1354" alt="image" src="https://github.com/user-attachments/assets/eff4ba44-a46a-47db-80d3-376667c05a8b" />
+
+<img width="1338" height="1336" alt="image" src="https://github.com/user-attachments/assets/4a216364-6512-43dd-ba34-389892b0734f" />
+
+
+and the following is the actually expected album covers.
+<img width="1302" height="1280" alt="image" src="https://github.com/user-attachments/assets/1066c1e9-4723-42df-b7cf-3b8b7f9df198" />
+
+
+
+I also tried using WGANs, the output of which is follows:
+<img width="1316" height="1318" alt="image" src="https://github.com/user-attachments/assets/80f75765-85a6-4846-b188-318111cdb534" />
+
+And hence I am moving to another dataset. I have found some interesting ones. I will finalise and update the latest dataset that I am using today. (Update for 05/06)
+
