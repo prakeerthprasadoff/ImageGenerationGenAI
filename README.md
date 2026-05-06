@@ -56,3 +56,8 @@ I also tried using WGANs, the output of which is follows:
 
 And hence I am moving to another dataset. I have found some interesting ones. I will finalise and update the latest dataset that I am using today. (Update for 05/06)
 
+
+Update 05/06
+I have selected CelebA dataset. https://www.kaggle.com/datasets/jessicali9530/celeba-dataset
+The dataset has ~200k pictures of celebrities in which they are annotated with attributes like bald, bangs, etc. The idea is to train a model to be able to regenerate these images conditioned on these attributes so that i can create a GUI where we can select features of the person required and it will generate a unique image including the features selected.
+
