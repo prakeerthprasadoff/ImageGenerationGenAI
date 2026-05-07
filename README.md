@@ -64,3 +64,19 @@ The dataset has ~200k pictures of celebrities in which they are annotated with a
 Update 05/06
 I am currently training a WGAN-GP, a conditional VAE, diffusion model on the dataset and a WGAN-GP which is capped with 6 features and 75k images, all parallely. 
 
+Update 05/07
+The new dataset was not performing very well on the WGAN. As in, the training is going pretty well. But in the testing phase, the model was not able to learn attributes very well. The WGAN that was capped at 6 features did learn some attributes pretty well.
+
+The Blond_Hair and Eyeglasses feature isn't perfectly learned here.
+<img width="359" height="363" alt="image" src="https://github.com/user-attachments/assets/f37f7682-4742-4e35-b7e6-042ed2f77e8c" />
+
+This picture did pretty well though.
+<img width="345" height="350" alt="image" src="https://github.com/user-attachments/assets/87cded86-fd5e-4abc-b2e2-079b67a64722" />
+
+I am continuing with the diffusion model which i feel is doing better in terms of performance.
+A generation for a young, bald, male who is smiling looks as follows :
+
+<img width="985" height="504" alt="image" src="https://github.com/user-attachments/assets/7527b3c0-0986-42da-b68b-96ca457ca262" />
+
+Even though it may not be as clear as the WGAN, it learns the features better. It is currently training for more epochs right now.
+
