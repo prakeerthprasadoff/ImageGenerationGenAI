@@ -61,3 +61,6 @@ Update 05/06
 I have selected CelebA dataset. https://www.kaggle.com/datasets/jessicali9530/celeba-dataset
 The dataset has ~200k pictures of celebrities in which they are annotated with attributes like bald, bangs, etc. The idea is to train a model to be able to regenerate these images conditioned on these attributes so that i can create a GUI where we can select features of the person required and it will generate a unique image including the features selected.
 
+Update 05/06
+I am currently training a WGAN-GP, a conditional VAE, diffusion model on the dataset and a WGAN-GP which is capped with 6 features and 75k images, all parallely. 
+
