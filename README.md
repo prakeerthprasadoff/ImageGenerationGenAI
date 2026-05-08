@@ -80,3 +80,8 @@ A generation for a young, bald, male who is smiling looks as follows :
 
 Even though it may not be as clear as the WGAN, it learns the features better. It is currently training for more epochs right now.
 
+Update 05/07
+Found that the best FID score is from checkpoint 120 and best val score is from the checkpoint 200. Decided to use checkpoint 120. Deployed the model with a React+vite frontend on huggingface. 
+
+https://huggingface.co/spaces/prakeerthprasad/ImageGenerator
+
