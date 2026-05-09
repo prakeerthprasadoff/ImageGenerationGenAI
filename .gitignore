@@ -30,3 +30,5 @@ env/
 *.log
 runs/
 wandb/
+checkpoint_epoch_120.pt
+*.pt
