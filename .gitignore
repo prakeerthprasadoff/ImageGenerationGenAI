@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+
+# Dataset (too large to commit; download from Kaggle)
+GAID/
+
+# Caches and checkpoints
+checkpoints/
+kt_dir/
+cache/
+*.pt
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+runs/
+wandb/
