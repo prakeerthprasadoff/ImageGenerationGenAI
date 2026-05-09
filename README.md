@@ -26,7 +26,8 @@ Or just use the deployed version — no setup needed:
 
 Sample faces generated with the *Young woman* preset (`Young`, `Attractive`, `Blond hair`, `Smiling`, `Heavy makeup`):
 
-![Generated samples](assets/generated_sample.png)
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/aca2bba1-d4bb-428d-9950-c142d23e9600" />
+
 
 The model was trained for 200 epochs on CelebA. Best checkpoint selected at **epoch 120** based on FID score (99.14) — validation loss peaked later at epoch 200 but visual quality had already plateaued.
 
