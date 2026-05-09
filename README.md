@@ -18,13 +18,13 @@ You'll need the CelebA dataset and the trained checkpoint on your machine. Make 
 
 Or just use the deployed version — no setup needed:
 
-👉 **[Try it on Hugging Face Spaces](https://huggingface.co/spaces/prakeerthprasad/ImageGenerator)**
+**[Try it on Hugging Face Spaces](https://huggingface.co/spaces/prakeerthprasad/ImageGenerator)**
 
 ---
 
 ## Results
 
-Sample faces generated with the *Young woman* preset (`Young`, `Attractive`, `Blond hair`, `Smiling`, `Heavy makeup`):
+Sample faces generated with the *Young woman* preset (`Young`, `Attractive`, `Blond hair`, `Smiling`):
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/aca2bba1-d4bb-428d-9950-c142d23e9600" />
 
@@ -43,11 +43,11 @@ The model was trained for 200 epochs on CelebA. Best checkpoint selected at **ep
 
 ---
 
-## Difficulties & Solutions
-
-| Difficulty | Solution |
-|---|---|
-| Early training loss spike dominated loss plots | Used log-scale y-axis and percentile clipping to make the convergence curve actually readable |
-| Val loss and FID disagreed on best checkpoint | Trusted FID over val loss — epoch 120 produced better images even though epoch 200 had lower noise MSE |
-| Checkpoint layer names mismatched when loading into GUI | Traced the mismatched keys (`downsample` vs `ds`, `upsample` vs `us`) and restored the original names from training |
-| Gradio checkbox labels clipping at narrow widths | Rewrote the attribute panel with custom CSS pill toggles using `white-space: nowrap` and a flex-wrap layout |
+## Difficulties
+ 
+The biggest challenge was getting any model to produce decent generations at all. I started with an **album art cover dataset** and trained a WGAN, GAN, cVAE, and a diffusion model on it — none of them produced satisfying results despite a lot of hyperparameter tuning, architecture tweaks, and multiple training runs. Album art is just too visually diverse for these model sizes to learn a coherent distribution.
+ 
+After spending a significant amount of time on that, I switched to **CelebA**, which has much more structural consistency across images. I then trained a WGAN (including a variant using only 6 attributes capped at 75k images), a VAE, and a diffusion model, and compared them side by side. The diffusion model was clearly the best of the three visually, so I stuck with it and focused on making it conditional on attributes.
+ 
+To save time across all these experiments, I ran **6 notebooks in parallel on the same node**, each with a different model configuration. This let me compare results across architectures and hyperparameter settings much faster than training them sequentially would have allowed.
+ 
